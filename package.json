@@ -1,0 +1,77 @@
+{
+  "name": "coc-unicode",
+  "version": "1.0.0",
+  "description": "unicode source for coc.nvim",
+  "scripts": {},
+  "engines": {
+    "coc": ">=0.0.57"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadowwa/coc-unicode.git"
+  },
+  "keywords": [
+    "coc.nvim",
+    "unicode",
+    "vim"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "properties": {
+        "coc.source.unicode.enable": {
+          "type": "boolean",
+          "default": true
+        },
+        "coc.source.unicode.shortcut": {
+          "type": "string",
+          "default": "U"
+        },
+        "coc.source.unicode.triggerPatterns":{
+          "type": "array",
+          "default": [
+            "uc-"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "coc.source.unicode.priority": {
+          "type": "integer",
+          "default": 3
+        },
+        "coc.source.unicode.disableSyntaxes": {
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "string"
+          }
+        },
+        "coc.source.unicode.filetypes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "default": [
+            "markdown"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "author": "Shad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shadowwa/coc-unicode/issues"
+  },
+  "homepage": "https://github.com/shadowwa/coc-unicode#readme",
+  "devDependencies": {
+    "coc.nvim": ">=0.0.57"
+  }
+}

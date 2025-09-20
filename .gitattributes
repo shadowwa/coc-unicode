@@ -1,0 +1,23 @@
+# Auto detect
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*                 text=auto
+
+# Source code
+*.js              text
+*.rb              text diff=ruby
+
+# Documentation
+*.txt             text
+LICENSE           text
+*README*          text
+
+# Configs
+.gitattributes    text
+package.json      text eol=lf
+package-lock.json text eol=lf -diff
+*.yml             text
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore         text
