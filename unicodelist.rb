@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 require 'open-uri'
 
@@ -6,13 +7,13 @@ firsts = {}
 lasts = {}
 
 File.open('unicode.txt', 'w') do |out|
-  URI.open(ARGV.first || 'https://unicode.org/Public/UNIDATA/UnicodeData.txt') do |f|
+  URI.parse(ARGV.first || 'https://unicode.org/Public/UNIDATA/UnicodeData.txt').open do |f|
     f.each_line do |l|
-      code, name, cat, ccc, bc, cdm, ddv, dv, nv, m, u1name, comment, ucase, lcase, tcase = *l.chomp.split(';', 15)
+      code, name, _, _, _, _, _, _, _, _, u1name, = *l.chomp.split(';', 15)
       if name =~ /<(.*), First>/
-        firsts[$1] = code
+        firsts[Regexp.last_match(1)] = code
       elsif name =~ /<(.*), Last>/
-        lasts[$1] = code
+        lasts[Regexp.last_match(1)] = code
       else
         name = u1name if name =~ /</ && !u1name.empty?
         character = [code.hex].pack 'U'
