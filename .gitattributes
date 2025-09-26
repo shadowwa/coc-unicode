@@ -21,3 +21,6 @@ package-lock.json text eol=lf -diff
 
 # Ignore files (like .npmignore or .gitignore)
 *.*ignore         text
+
+# prevent git to modify cr in file
+unicode.txt       -text
