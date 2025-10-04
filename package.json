@@ -1,6 +1,6 @@
 {
   "name": "coc-unicode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "unicode source for coc.nvim",
   "scripts": {},
   "engines": {
