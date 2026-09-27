@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" width="120" alt="coc-unicode" />
+</p>
+
 # Coc Unicode
 
 Unicode completion source for [coc.nvim](https://github.com/neoclide/coc.nvim).

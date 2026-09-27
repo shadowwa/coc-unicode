@@ -2,6 +2,7 @@ unicodelist.rb
 /.github
 /.gitattributes
 /.rubocop.yml
+/assets
 ## Auto-generated tag files
 tags
 GTAGS
